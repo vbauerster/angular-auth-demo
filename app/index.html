@@ -3,8 +3,16 @@
 <head>
     <meta charset="UTF-8">
     <title></title>
+    <style>[ng-cloak] { display: none; }</style>
 </head>
 <body>
-
+<div ng-controller="WelcomeController">
+    {{greeting}}
+</div>
+<script src="jspm_packages/system.js"></script>
+<script src="config.js"></script>
+<script>
+    System.import('src/bootstrap');
+</script>
 </body>
 </html>
