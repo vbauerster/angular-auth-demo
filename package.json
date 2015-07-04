@@ -3,7 +3,11 @@
   "version": "1.0.0",
   "description": "Angular todo app",
   "scripts": {
-    "serveit": "browser-sync start --files 'app/**/*.html,app/**/*.css,app/**/*.js' --server 'app'"
+    "serveit": "browser-sync start --files 'app/**/*.html,app/**/*.css,app/**/*.js' --server 'app'",
+    "buildAutoLoad": "jspm bundle bootstrap --inject",
+    "buildAutoLoadMin": "jspm bundle --minify bootstrap --inject",
+    "buildSfxMin": "jspm bundle-sfx --minify bootstrap",
+    "devMode": "jspm unbundle"
   },
   "author": "",
   "license": "ISC",

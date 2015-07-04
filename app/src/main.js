@@ -1,6 +1,6 @@
 var app = angular.module('demo', [])
-    .controller('WelcomeController', function($scope) {
+    .controller('WelcomeController', ['$scope', function($scope) {
         $scope.greeting = 'Welcome!';
-    });
+    }]);
 
 export default app;

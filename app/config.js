@@ -10,6 +10,14 @@ System.config({
     "*": "*.js",
     "github:*": "jspm_packages/github/*.js",
     "npm:*": "jspm_packages/npm/*.js"
+  },
+  "bundles": {
+    "build": [
+      "github:angular/bower-angular@1.4.1/angular",
+      "src/main",
+      "github:angular/bower-angular@1.4.1",
+      "bootstrap"
+    ]
   }
 });
 
