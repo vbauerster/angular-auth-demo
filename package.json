@@ -7,7 +7,8 @@
     "buildAutoLoad": "jspm bundle bootstrap --inject",
     "buildAutoLoadMin": "jspm bundle --minify bootstrap --inject",
     "buildSfxMin": "jspm bundle-sfx --minify bootstrap",
-    "devMode": "jspm unbundle"
+    "devMode": "jspm unbundle",
+    "dependencies": "jspm inspect"
   },
   "author": "",
   "license": "ISC",
