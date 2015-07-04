@@ -2,5 +2,6 @@ import angular from 'angular';
 import main from 'src/main';
 
 angular.element(document).ready(function() {
-    angular.bootstrap(document, ['demo']);
+    //console.log(main.name);
+    angular.bootstrap(document, [main.name]);
 });
