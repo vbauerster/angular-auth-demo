@@ -3,11 +3,12 @@
   "version": "1.0.0",
   "description": "Angular todo app",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "serveit": "browser-sync start --files 'app/**/*.html,app/**/*.css,app/**/*.js' --server 'app'"
   },
   "author": "",
   "license": "ISC",
   "devDependencies": {
+    "browser-sync": "^2.7.13",
     "jspm": "^0.15.7"
   },
   "jspm": {
