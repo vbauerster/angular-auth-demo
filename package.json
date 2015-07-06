@@ -1,7 +1,7 @@
 {
-  "name": "todomvc",
+  "name": "loginform",
   "version": "1.0.0",
-  "description": "Angular todo app",
+  "description": "ES6 modules usage demo",
   "scripts": {
     "serveit": "browser-sync start --files 'app/**/*.html,app/**/*.css,app/**/*.js' --server 'app'",
     "buildAutoLoad": "jspm bundle bootstrap --inject",
