@@ -20,7 +20,6 @@ input {
 	line-height: 1.5em;
 	margin: 0;
 	padding: 0;
-	/*-webkit-appearance: none;*/
 	border-radius: 5px;
 	-moz-border-radius: 5px;
 	-webkit-border-radius: 5px;
@@ -28,12 +27,12 @@ input {
 	-ms-border-radius: 5px;
 }
 
-.Registro {
+.Login {
 	margin: 50px auto;
 	width: 242px;
 }
 
-.Registro span {
+.Login span {
 	color: hsl(5, 50%, 57%);
 	display: block;
 	height: 48px;
@@ -43,13 +42,13 @@ input {
 	width: 36px;
 }
 
-.Registro input {
+.Login input {
 	border: none;
 	height: 48px;
 	outline: none;
 }
 
-.Registro input[type="text"] {
+.Login input[type="text"] {
     margin-bottom: 1px;
     border-bottom-right-radius: 0;
     border-bottom-left-radius: 0;
@@ -57,7 +56,7 @@ input {
 	width: 244px;
 }
 
-.Registro input[type="password"] {
+.Login input[type="password"] {
     border-top-right-radius: 0;
     border-top-left-radius: 0;
     margin-bottom: 20px;
@@ -65,7 +64,7 @@ input {
 	width: 244px;
 }
 
-.Registro input[type="submit"] {
+.Login input[type="submit"] {
 	background-color: #d45b26;
 	color: #fff;
     font-size: 1.2em;
@@ -75,17 +74,17 @@ input {
 	width: 280px;
 }
 
-.Registro input[type="submit"]:hover {
+.Login input[type="submit"]:hover {
     background-color: #da5a25;
     box-shadow: 2px 2px 20px  #d45b26, #fff 0 -1px 2px;
 }
 
 .texto {
-  color: #2c90c6; 
-  font-size: 40px; 
+  color: #2c90c6;
+  font-size: 40px;
   margin: 2% auto;
   text-align: center;
-  font-family: 'Titan One';   
+  font-family: 'Titan One';
   text-shadow: 1px 2px 1px  rgba(0,0,0,.5);
   padding-top: 40px;
 }
