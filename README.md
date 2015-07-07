@@ -13,7 +13,7 @@ The project utilizes [Babel](http://babeljs.io/) transpiler, which makes sure to
 
 `jspm install`
 
-#### Finally run browser-sync, to view [view](http://localhost:3000) in action
+#### Finally run browser-sync, to [view](http://localhost:3000) in action
 
 `npm run serveit`
 
