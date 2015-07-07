@@ -9,7 +9,7 @@ var authService = function ($timeout) {
             value: {
                 firstName: 'Vladimir',
                 lastName: 'Bauer',
-                type: 'admin'
+                role: 'admin'
             }
         }
     });
@@ -32,6 +32,9 @@ var authService = function ($timeout) {
         },
         isAuthenticated: function () {
             return authenticated;
+        },
+        logOut: function () {
+            authenticated = false;
         }
     };
 };

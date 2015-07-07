@@ -16,7 +16,7 @@ body {
 }
 
 input {
-    transition: .5s linear all;
+    transition: .2s linear all;
 	font-size: 1em;
 	line-height: 1.5em;
 	margin: 0;
@@ -28,7 +28,7 @@ input {
 	-ms-border-radius: 5px;
 }
 
-input.ng-dirty.ng-invalid {
+form.ng-submitted input.ng-invalid, input.ng-dirty.ng-invalid {
     background-color: #ffc7c7;
 }
 
@@ -101,6 +101,6 @@ input.ng-dirty.ng-invalid {
   padding-top: 40px;
 }
 
-p:hover {
+p {
   text-shadow: 2px 2px 20px  #2c90c6, #fff 0 -1px 2px;
 }

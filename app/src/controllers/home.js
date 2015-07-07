@@ -1,6 +1,11 @@
-var inject = ['$scope'];
-var controller = function ($scope) {
+var inject = ['$scope', '$state', 'authService'];
+var homeCtrl = function ($scope, $state, authService) {
     $scope.greeting = 'Hello World!';
+
+    $scope.logOut = function (argument) {
+        authService.logOut();
+        $state.reload();
+    };
 };
-controller.$inject = inject;
-export default controller;
+homeCtrl.$inject = inject;
+export default homeCtrl;
