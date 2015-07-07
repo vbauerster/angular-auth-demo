@@ -16,6 +16,7 @@ body {
 }
 
 input {
+    transition: .5s linear all;
 	font-size: 1em;
 	line-height: 1.5em;
 	margin: 0;
@@ -27,12 +28,16 @@ input {
 	-ms-border-radius: 5px;
 }
 
-.Login {
+input.ng-dirty.ng-invalid {
+    background-color: #ffc7c7;
+}
+
+.login {
 	margin: 50px auto;
 	width: 242px;
 }
 
-.Login span {
+.login span {
 	color: hsl(5, 50%, 57%);
 	display: block;
 	height: 48px;
@@ -42,13 +47,13 @@ input {
 	width: 36px;
 }
 
-.Login input {
+.login input {
 	border: none;
 	height: 48px;
 	outline: none;
 }
 
-.Login input[type="text"] {
+.login input[type="text"] {
     margin-bottom: 1px;
     border-bottom-right-radius: 0;
     border-bottom-left-radius: 0;
@@ -56,7 +61,7 @@ input {
 	width: 244px;
 }
 
-.Login input[type="password"] {
+.login input[type="password"] {
     border-top-right-radius: 0;
     border-top-left-radius: 0;
     margin-bottom: 20px;
@@ -64,7 +69,7 @@ input {
 	width: 244px;
 }
 
-.Login input[type="submit"] {
+.login input[type="submit"] {
 	background-color: #d45b26;
 	color: #fff;
     font-size: 1.2em;
@@ -74,7 +79,7 @@ input {
 	width: 280px;
 }
 
-.Login input[type="submit"]:hover {
+.login input[type="submit"]:hover {
     background-color: #da5a25;
     box-shadow: 2px 2px 20px  #d45b26, #fff 0 -1px 2px;
 }

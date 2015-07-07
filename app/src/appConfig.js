@@ -7,7 +7,7 @@ var config = function ($stateProvider, $urlRouterProvider) {
         .state('login', {
             url: '/',
             templateUrl: 'templates/login.html',
-            controller: 'loginCtrl'
+            controller: 'loginCtrl as controller'
         })
         .state('home', {
             url: '/home',

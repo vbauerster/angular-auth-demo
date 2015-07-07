@@ -9,6 +9,9 @@ export default function () {
     var authenticated = false;
     return {
         authenticate: function (user, password) {
+            if (user == null || password == null) {
+                return false;
+            }
             return authenticated = (userMap[user] === password);
         },
         isAuthenticated: function () {

@@ -1,13 +1,13 @@
-<div class="Login">
-    <form method="post" action="javascript:void(0);">
+<div class="login">
+    <form ng-submit="controller.submit()" name="controller.loginForm" novalidate>
 
         <span class="fontawesome-user"></span>
-        <input type="text" placeholder="Username" autocomplete="off">
+        <input type="text" placeholder="Username" name="userName" ng-model="controller.user.name" required />
 
         <span class="fontawesome-lock"></span>
-        <input type="password" name="password" id="password" required placeholder="Password" autocomplete="off">
+        <input type="password" placeholder="Password" name="userPassword" ng-model="controller.user.password" required />
 
-        <input type="submit" value="log in">
+        <input type="submit" value="log in" />
 
     </form>
 </div>
