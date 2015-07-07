@@ -1,7 +1,7 @@
 var inject = ['$stateProvider', '$urlRouterProvider'];
 var config = function ($stateProvider, $urlRouterProvider) {
 
-    $urlRouterProvider.otherwise('/');
+    $urlRouterProvider.otherwise('/home');
 
     $stateProvider
         .state('login', {
