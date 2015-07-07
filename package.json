@@ -10,8 +10,7 @@
     "devMode": "jspm unbundle",
     "dependencies": "jspm inspect"
   },
-  "author": "",
-  "license": "ISC",
+  "author": "Vladimir Bauer",
   "devDependencies": {
     "browser-sync": "^2.7.13",
     "jspm": "^0.15.7"
