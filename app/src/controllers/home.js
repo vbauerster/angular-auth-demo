@@ -1,6 +1,6 @@
 var inject = ['$scope', '$state', 'authService'];
 var homeCtrl = function ($scope, $state, authService) {
-    $scope.greeting = 'Hello World!';
+    $scope.user = authService.getCurrentUser();
 
     $scope.logOut = function (argument) {
         authService.logOut();

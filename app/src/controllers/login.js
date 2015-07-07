@@ -1,5 +1,5 @@
-var inject = ['authService', '$state', '$log', '$timeout'];
-var loginCtrl = function (authService, $state, $log, $timeout) {
+var inject = ['authService', '$state', '$log'];
+var loginCtrl = function (authService, $state, $log) {
 
     var controller = this;
 
