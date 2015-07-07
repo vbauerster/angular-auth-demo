@@ -1,13 +1,18 @@
-var inject = ['authService', '$state', '$log'];
-var controller = function (authService, $state, $log) {
+var inject = ['authService', '$state', '$log', '$timeout'];
+var controller = function (authService, $state, $log, $timeout) {
+
     this.submit = function () {
-        var user = this.user;
-        console.log(user);
-        if (authService.authenticate(user.name, user.password)) {
+        var user = this.user || {};
+        //$log.debug(user);
+        //$log.debug(authService.authenticate(user.name, user.password));
+
+        authService.authenticate(user.name, user.password).then(function (user) {
+            $log.debug('success:', user);
             $state.go('home');
-        } else {
+        }, function (reject) {
+            $log.debug('reject:', reject);
             $log.debug('invalid credentials');
-        }
+        });
     };
 };
 controller.$inject = inject;

@@ -84,6 +84,13 @@ input.ng-dirty.ng-invalid {
     box-shadow: 2px 2px 20px  #d45b26, #fff 0 -1px 2px;
 }
 
+.login input[type="submit"]:disabled {
+    background-color: #b1b2b1;
+    box-shadow: none;
+    color: #696969;
+    text-shadow: 0 1px 0 #eee;
+}
+
 .texto {
   color: #2c90c6;
   font-size: 40px;

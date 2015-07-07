@@ -2,20 +2,38 @@
  * Don't use in prod)
  * @returns {{authenticace: Function, isAuthenticated: Function}}
  */
-export default function () {
-    var userMap = {
-        admin: 'secret'
-    };
+var inject = ['$timeout'];
+var authService = function ($timeout) {
+    var userMap = Object.create(null, {
+        admin: {
+            value: {
+                firstName: 'Vladimir',
+                lastName: 'Bauer',
+                type: 'admin'
+            }
+        }
+    });
+    var passwordMap = Object.create(null, {
+        admin: {value: 'secret'}
+    });
     var authenticated = false;
     return {
-        authenticate: function (user, password) {
-            if (user == null || password == null) {
-                return false;
-            }
-            return authenticated = (userMap[user] === password);
+        authenticate: function (name, password) {
+            var promise = $timeout(function () {
+                var user = userMap[name];
+                if (user && passwordMap[name] === password) {
+                    authenticated = true;
+                    return user;
+                } else {
+                    $timeout.cancel(promise);
+                }
+            }, 300);
+            return promise;
         },
         isAuthenticated: function () {
             return authenticated;
         }
     };
 };
+authService.$inject = inject;
+export default authService;
