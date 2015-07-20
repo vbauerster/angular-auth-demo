@@ -4,15 +4,16 @@
   "description": "ES6 modules usage demo",
   "scripts": {
     "serveit": "browser-sync start --files 'app/**/*.html,app/**/*.css,app/**/*.js' --server 'app'",
-    "buildAutoLoad": "jspm bundle bootstrap --inject",
-    "buildAutoLoadMin": "jspm bundle --minify bootstrap --inject",
-    "buildSfxMin": "jspm bundle-sfx --minify bootstrap",
+    "autoInjectBundle": "jspm bundle --minify bootstrap app/dist/bundle-inject.js --inject",
+    "bundle": "jspm bundle-sfx --minify bootstrap app/dist/bundle-sfx.js",
+    "htmldist": "html-dist app/index.html --remove-all --minify --insert dist/bundle-sfx.js -o app/index-bundle.html",
     "devMode": "jspm unbundle",
     "dependencies": "jspm inspect"
   },
   "author": "Vladimir Bauer",
   "devDependencies": {
     "browser-sync": "^2.7.13",
+    "html-dist": "^0.1.0",
     "jspm": "^0.15.7"
   },
   "jspm": {

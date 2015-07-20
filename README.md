@@ -13,14 +13,11 @@ The project utilizes [Babel](http://babeljs.io/) transpiler, which makes sure to
 
 `jspm install`
 
-#### Finally run browser-sync, to [view](http://localhost:3000) in action
+#### HTTP [serve](http://localhost:3000) with browser-sync
 
 `npm run serveit`
 
-#### To build
+#### Build as a single js file to [dist](http://localhost:3000/index-bundle.html)
 
-`npm run buildAutoLoadMin`
-
-#### To build as a single js file (index.sfx.html)
-
-`npm run buildSfxMin`
+`npm run bundle`
+`npm run htmldist`
