@@ -1,19 +1,22 @@
-var inject = ['$stateProvider', '$urlRouterProvider'];
-var config = function ($stateProvider, $urlRouterProvider) {
+var inject = ['$stateProvider', '$urlRouterProvider', '$compileProvider'];
+var config = function ($stateProvider, $urlRouterProvider, $compileProvider) {
 
-    $urlRouterProvider.otherwise('/home');
+	// removes ng-scope annotations in html
+	$compileProvider.debugInfoEnabled(false);
 
-    $stateProvider
-        .state('login', {
-            url: '/',
-            templateUrl: 'templates/login.html',
-            controller: 'loginCtrl as controller'
-        })
-        .state('home', {
-            url: '/home',
-            templateUrl: 'templates/home.html',
-            controller: 'homeCtrl'
-        });
+	$urlRouterProvider.otherwise('/home');
+
+	$stateProvider
+		.state('login', {
+			url: '/',
+			templateUrl: 'templates/login.html',
+			controller: 'loginCtrl as controller'
+		})
+		.state('home', {
+			url: '/home',
+			templateUrl: 'templates/home.html',
+			controller: 'homeCtrl'
+		});
 };
 config.$inject = inject;
 export default config;
